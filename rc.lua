@@ -13,6 +13,7 @@ local awful = require "awful"
 local gears = require "gears"
 local beautiful = require "beautiful"
 
+
 require "main.error_handling"
 
 beautiful.init(gears.filesystem.get_configuration_dir() .. "theme/theme.lua")

@@ -1,7 +1,7 @@
 local awful = require "awful"
 local gears = require "gears"
 
-local city = "" -- Ex. London or Salt+Lake+City
+local city = "santiago.chile" -- Ex. London or Salt+Lake+City
 
 local get_weather = function()
 	local script = [[

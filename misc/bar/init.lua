@@ -7,7 +7,7 @@ local dpi = beautiful.xresources.apply_dpi
 
 -- Get widgets
 local clock = require "misc.bar.clock"
---local wifi = require "misc.bar.wifi"
+local wifi = require "misc.bar.wifi"
 local volume = require "misc.bar.volume"
 local launcher = require "misc.bar.launcher"
 local menu = require "misc.bar.menu"
@@ -16,7 +16,7 @@ local menu = require "misc.bar.menu"
 local right = wibox.widget {
 	{
 		volume,
-		wifi,
+		--wifi,
 		clock,
 		launcher,
 		spacing = dpi(20),

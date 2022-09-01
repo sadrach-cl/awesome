@@ -28,7 +28,7 @@ local widgets = wibox.widget {
 			temperature,
 			wifi,
 			uptime,
-			spacing = dpi(40),
+			spacing = dpi(10),
 			layout = wibox.layout.fixed.vertical,
 		},
 		margins = {left = dpi(20), right = dpi(20)},
@@ -57,7 +57,7 @@ end
 
 -- Sidebar
 local sidebar = wibox {
-	visible = false,
+	visible = true,
 	ontop = true,
 	width = width,
 	height = height,
@@ -70,11 +70,11 @@ sidebar : setup {
 	nil,
 	{
 		clock,
-		space(30),
+		space(10),
 		profile,
-		space(30),
+		space(10),
 		slider_widget,
-		space(50),
+		space(10),
 		widgets,
 		layout = wibox.layout.fixed.vertical,
 	},

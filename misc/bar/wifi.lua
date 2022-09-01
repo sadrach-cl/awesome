@@ -5,7 +5,7 @@ local beautiful = require "beautiful"
 
 -- Wifi
 local wifi = wibox.widget.textbox()
-wifi.font = "SFProDisplay Nerd Font 12"
+wifi.font = "SFProDisplay Nerd Font 14"
 
 local function get_wifi()
 	local script = [[
@@ -19,7 +19,7 @@ local function get_wifi()
 			awk '/^\s*w/ { print  int($3 * 100 / 70) }' /proc/net/wireless
 			]]
 
-			awful.spawn.easy_async_with_shell(get_strength, function(stdout)
+			awful.spawn.easy_async_with_shell(function(stdout)
 				local strength = tonumber(stdout)
 				if strength < 20 then
 					wifi.markup = "󰤯"
@@ -32,7 +32,7 @@ local function get_wifi()
 				else
 					wifi.markup = "󰤨"
 				end
-			end)
+			end, get_strength)
 		else
 			wifi.markup = "󰤭"
 		end
