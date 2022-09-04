@@ -16,7 +16,7 @@ local menu = require "misc.bar.menu"
 local right = wibox.widget {
 	{
 		volume,
-		--wifi,
+		wifi,
 		clock,
 		launcher,
 		spacing = dpi(20),
@@ -46,12 +46,12 @@ local function get_bar(s)
 		visible = true,
 		ontop = false,
 		width = s.geometry.width,
-		height = dpi(25),
-		bg = beautiful.bg_alt,
+		height = dpi(30),
+		bg = beautiful.bg,
 		type = 'dock'
 	}
 
-	bar:struts { top = dpi(30), left = dpi(5), right = dpi(5) }
+	bar:struts { top = dpi(30), left = dpi(0), right = dpi(0) }
 
 	bar : setup {
 		left,

@@ -47,8 +47,8 @@ theme.fg_urgent     = theme.fg_normal
 theme.fg_minimize   = theme.fg_normal
 
 theme.useless_gap         = dpi(10)
-theme.border_width        = dpi(0)
---theme.border_color  = "#ca9ee6"
+--theme.border_width        = dpi(2)
+theme.border_color  = "#ca9ee6"
 -- Colors
 
 theme.black = "#121014"
@@ -59,12 +59,12 @@ theme.blue = "#b4befe"
 theme.magenta = "#cba6f7"
 theme.pink = "#f2cdcd"
 theme.white = "#cdd6f4"
-theme.transparent = "#cdd6f409"
+theme.transparent = "#cdd6f400"
 
 theme.fg = "#33374c"
 
 theme.bg = "#232634"
-theme.bg_alt = "#1e1e2e"
+theme.bg_alt = "#cba6f7"
 
 -- Menu
 

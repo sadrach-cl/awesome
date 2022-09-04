@@ -16,3 +16,4 @@ xfce4-power-manager &
 #bash -c 'light-locker || light-locker' &
 nitrogen --restore &
 setxkbmap us,es -option grp:alt_shift_toggle &
+polybar -c ~/.config/polybar/main/config.ini
