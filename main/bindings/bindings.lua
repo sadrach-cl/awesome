@@ -12,14 +12,10 @@ modkey = "Mod4"
 
 -- General awesome keybindings
 awful.keyboard.append_global_keybindings({
-    awful.key({ modkey, "Control" }, "r", awesome.restart,
-              {description = "Recargar Awesome", group = "awesome"}),
-    
+    awful.key({ modkey, "Control" }, "r", awesome.restart, {description = "Recargar Awesome", group = "awesome"}),
     awful.key({ modkey }, "s", hotkeys_popup.show_help, { description = "Ayuda Shortcuts", group = "awesome" }),
-
-    awful.key({ modkey, "Shift"   }, "q", awesome.quit,
-              {description = "quit awesome", group = "awesome"}),
-
+    awful.key({ modkey, "Shift"   }, "q", awesome.quit, {description = "quit awesome", group = "awesome"}),
+    awful.key({ modkey }, "Return", function () awful.spawn(apps.terminal) end, {description = "Abre la terminal", group = "launcher"}),
     -- awful.key({ modkey }, "x",
     --           function ()
     --               awful.prompt.run {
@@ -30,10 +26,6 @@ awful.keyboard.append_global_keybindings({
     --               }
     --           end,
     --           {description = "lua execute prompt", group = "awesome"}),
-
-    awful.key({ modkey }, "Return", function () awful.spawn(apps.terminal) end,
-              {description = "Abre la terminal", group = "launcher"}),
-              
     -- awful.key({ modkey }, "p", function() menubar.show() end,
     --           {description = "show the menubar", group = "launcher"}),
 })

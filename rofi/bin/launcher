@@ -7,5 +7,5 @@ rofi \
 	-drun-display-format "{name}" \
 	-no-drun-show-actions \
 	-terminal kitty \
-	-kb-cancel Alt-F1 \
-	-theme "$HOME"/.config/awesome/rofi/config/launcher.rasi
+	-click-to-exit: true; \
+	-theme "$HOME"/.config/awesome/rofi/config/config.rasi

@@ -9,11 +9,14 @@ modkey = "Mod4"
 alt = "Mod1"
 
 awful.keyboard.append_global_keybindings({
-	awful.key({modkey}, "d", function() awful.util.spawn('bash -c "~/.config/awesome/rofi/bin/launcher"') end), -- Rofi
+	awful.key({modkey}, "d", function() awful.util.spawn('rofi -show drun') end), -- Rofi
 	awful.key({modkey}, "r", function() awful.util.spawn('bash -c "~/.config/awesome/rofi/bin/runner"') end), -- Rofi exec
 	awful.key({modkey, "Shift" }, "e", function() awful.util.spawn('bash -c "~/.config/awesome/rofi/bin/powermenu"') end), -- Rofi
 	awful.key({modkey}, "x", function() awful.util.spawn('bash -c "~/.config/awesome/rofi/bin/screenshot"') end), -- Rofi
 
+
+	awful.key({ modkey, }, "k", function() awful.util.spawn('xset led 3') end),
+	awful.key({ modkey, "Shift" }, "k", function() awful.util.spawn('xset -led 3') end),
 	awful.key({alt}, "c", function() awesome.emit_signal("sidebar::toggle") end), -- Sidebar
 	awful.key({alt}, "t", function() awful.titlebar.toggle(client.focus) end), -- Toggle titlebar
 	awful.key({alt}, "x", function() awesome.emit_signal("lockscreen::toggle") end), -- Toggle lockscreen

@@ -12,8 +12,9 @@ done
 picom --config $HOME/.config/awesome/picom/picom.conf --experimental-backends &
 nm-applet &
 xfce4-power-manager &
+fusuma -d &
 #bash -c 'pgrep xfce4-clipman || xfce4-clipman' &
 #bash -c 'light-locker || light-locker' &
 nitrogen --restore &
 setxkbmap us,es -option grp:alt_shift_toggle &
-polybar -c ~/.config/polybar/main/config.ini
+# polybar -c ~/.config/polybar/main/config.ini
